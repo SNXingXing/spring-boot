@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>在线用户</title>
+</head>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>用户名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${userList}">
+                <td th:text="${user.value.id}">1</td>
+                <td th:text="${user.value.userName}">2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>密码修改</title>
+</head>
+<body>
+    密码修改:
+    <form action="#" th:action="@{/userUpdateHandler}" th:object="${User}" method="post">
+        用户名:<input type="text" th:field="*{userName}" readonly="readonly"/><br/>
+        旧密码:<input type="password" th:field="*{userPassword}"/><br/>
+        新密码:<input type="password" name="newPassword"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
